@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090a0f"/>
+      <stop offset="60%" stop-color="#0f1118"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <linearGradient id="amberGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#cBg)" rx="16"/>
+  <rect width="798" height="448" x="1" y="1" fill="none" stroke="rgba(245, 158, 11, 0.25)" stroke-width="1.5" rx="15"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="42" fill="#111218" rx="16"/>
+  <circle cx="28" cy="21" r="5" fill="#ef4444" opacity="0.8"/>
+  <circle cx="44" cy="21" r="5" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="60" cy="21" r="5" fill="#10b981" opacity="0.8"/>
+  <text x="400" y="26" fill="#a1a1aa" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="1">C SYSTEM RUNTIME &amp; MEMORY ALLOCATOR • GCC 13.2</text>
+
+  <!-- Left Editor Panel -->
+  <g transform="translate(25, 55)">
+    <rect width="440" height="365" rx="10" fill="#0d0e14" stroke="#1f2230" stroke-width="1"/>
+    
+    <!-- Tab -->
+    <rect x="0" y="0" width="150" height="32" rx="10" fill="#161822"/>
+    <text x="20" y="21" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="12">memory_pool.c</text>
+
+    <!-- Code Lines -->
+    <g font-family="'Fira Code', Consolas, monospace" font-size="11.5" xml:space="preserve">
+      <text x="15" y="60" fill="#64748b">1</text>
+      <text x="40" y="60" fill="#f43f5e">#include</text>
+      <text x="105" y="60" fill="#10b981">&lt;stdio.h&gt;</text>
+
+      <text x="15" y="82" fill="#64748b">2</text>
+      <text x="40" y="82" fill="#f43f5e">#include</text>
+      <text x="105" y="82" fill="#10b981">&lt;stdlib.h&gt;</text>
+
+      <text x="15" y="110" fill="#64748b">3</text>
+      <text x="40" y="110" fill="#38bdf8">typedef struct</text>
+      <text x="145" y="110" fill="#fbbf24">Node</text>
+      <text x="185" y="110" fill="#e2e8f0">{</text>
+
+      <text x="15" y="132" fill="#64748b">4</text>
+      <text x="60" y="132" fill="#38bdf8">int</text>
+      <text x="90" y="132" fill="#e2e8f0">data;</text>
+      <text x="135" y="132" fill="#38bdf8">struct</text>
+      <text x="185" y="132" fill="#fbbf24">Node*</text>
+      <text x="230" y="132" fill="#e2e8f0">next;</text>
+
+      <text x="15" y="154" fill="#64748b">5</text>
+      <text x="40" y="154" fill="#e2e8f0">} </text>
+      <text x="55" y="154" fill="#fbbf24">Node;</text>
+
+      <text x="15" y="182" fill="#64748b">6</text>
+      <text x="40" y="182" fill="#38bdf8">Node*</text>
+      <text x="85" y="182" fill="#60a5fa">create_node</text>
+      <text x="175" y="182" fill="#e2e8f0">(</text>
+      <text x="185" y="182" fill="#38bdf8">int</text>
+      <text x="215" y="182" fill="#e2e8f0">val) {</text>
+
+      <text x="15" y="204" fill="#64748b">7</text>
+      <text x="60" y="204" fill="#38bdf8">Node*</text>
+      <text x="105" y="204" fill="#e2e8f0">n = (Node*)</text>
+      <text x="195" y="204" fill="#f59e0b">malloc</text>
+      <text x="245" y="204" fill="#e2e8f0">(sizeof(Node));</text>
+
+      <text x="15" y="226" fill="#64748b">8</text>
+      <text x="60" y="226" fill="#e2e8f0">n-&gt;data = val;</text>
+
+      <text x="15" y="248" fill="#64748b">9</text>
+      <text x="60" y="248" fill="#e2e8f0">n-&gt;next = </text>
+      <text x="145" y="248" fill="#f43f5e">NULL</text>
+      <text x="180" y="248" fill="#e2e8f0">;</text>
+
+      <text x="15" y="270" fill="#64748b">10</text>
+      <text x="60" y="270" fill="#f43f5e">return</text>
+      <text x="115" y="270" fill="#e2e8f0">n;</text>
+
+      <text x="15" y="292" fill="#64748b">11</text>
+      <text x="40" y="292" fill="#e2e8f0">}</text>
+
+      <text x="15" y="320" fill="#64748b">12</text>
+      <text x="40" y="320" fill="#64748b">// Memory verification test</text>
+
+      <text x="15" y="342" fill="#64748b">13</text>
+      <text x="40" y="342" fill="#10b981">printf</text>
+      <text x="90" y="342" fill="#fbbf24">("Heap Allocated @ %p\n", n);</text>
+    </g>
+  </g>
+
+  <!-- Right Visualizer Panel -->
+  <g transform="translate(480, 55)">
+    <!-- Memory Stack/Heap Vis -->
+    <rect width="295" height="185" rx="10" fill="#0d0e14" stroke="rgba(245, 158, 11, 0.25)" stroke-width="1"/>
+    <text x="18" y="25" fill="#f4f4f6" font-family="'Outfit', sans-serif" font-size="13" font-weight="600">Memory Pointer Graph</text>
+
+    <!-- Node 1 -->
+    <g transform="translate(20, 45)">
+      <rect width="65" height="50" rx="6" fill="#1e202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="32" y="22" fill="#71717a" font-family="monospace" font-size="9" text-anchor="middle">ADDR: 0x1A</text>
+      <text x="32" y="40" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">42</text>
+    </g>
+    <!-- Arrow -->
+    <path d="M 90 70 L 115 70 M 110 65 L 117 70 L 110 75" fill="none" stroke="#fbbf24" stroke-width="2"/>
+
+    <!-- Node 2 -->
+    <g transform="translate(120, 45)">
+      <rect width="65" height="50" rx="6" fill="#1e202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="32" y="22" fill="#71717a" font-family="monospace" font-size="9" text-anchor="middle">ADDR: 0x24</text>
+      <text x="32" y="40" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">89</text>
+    </g>
+    <!-- Arrow -->
+    <path d="M 190 70 L 215 70 M 210 65 L 217 70 L 210 75" fill="none" stroke="#fbbf24" stroke-width="2"/>
+
+    <!-- Node 3 (NULL) -->
+    <g transform="translate(220, 45)">
+      <rect width="60" height="50" rx="6" fill="#181920" stroke="#64748b" stroke-width="1" stroke-dasharray="3"/>
+      <text x="30" y="22" fill="#71717a" font-family="monospace" font-size="9" text-anchor="middle">NEXT</text>
+      <text x="30" y="40" fill="#ef4444" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">NULL</text>
+    </g>
+
+    <!-- Stat badges -->
+    <rect x="20" y="115" width="120" height="55" rx="6" fill="#161822"/>
+    <text x="30" y="134" fill="#71717a" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">HEAP FOOTPRINT</text>
+    <text x="30" y="157" fill="#10b981" font-family="'Outfit', sans-serif" font-size="16" font-weight="700">64 Bytes</text>
+
+    <rect x="155" y="115" width="125" height="55" rx="6" fill="#161822"/>
+    <text x="165" y="134" fill="#71717a" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">TIME COMPLEXITY</text>
+    <text x="165" y="157" fill="#fbbf24" font-family="'Outfit', sans-serif" font-size="16" font-weight="700">O(1) Prepend</text>
+
+    <!-- Console Output Panel -->
+    <g transform="translate(0, 195)">
+      <rect width="295" height="170" rx="10" fill="#000" stroke="rgba(245, 158, 11, 0.3)" stroke-width="1"/>
+      <text x="15" y="22" fill="#71717a" font-family="monospace" font-size="10">$ gcc -Wall memory_pool.c &amp;&amp; ./a.out</text>
+      <text x="15" y="44" fill="#10b981" font-family="monospace" font-size="10.5">[✓] Compiled with 0 warnings</text>
+      <text x="15" y="66" fill="#fbbf24" font-family="monospace" font-size="10.5">[init] Allocating pool chunk 1</text>
+      <text x="15" y="88" fill="#e2e8f0" font-family="monospace" font-size="10.5">Heap Allocated @ 0x7ffd19b0</text>
+      <text x="15" y="110" fill="#e2e8f0" font-family="monospace" font-size="10.5">Val: 42 -&gt; Val: 89 -&gt; NULL</text>
+      <text x="15" y="132" fill="#10b981" font-family="monospace" font-size="10.5">Execution time: 0.0004s</text>
+      <line x1="15" y1="150" x2="25" y2="150" stroke="#f59e0b" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
