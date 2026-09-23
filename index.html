@@ -2,12 +2,19 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Krishnajith PS | BCA Student &amp; Aspiring Developer Portfolio</title>
   <meta name="description" content="Personal portfolio of Krishnajith PS, a 2nd-year BCA student at Elims College of Arts and Science passionate about programming, data science, and software development.">
   <meta name="keywords" content="Krishnajith PS, Portfolio, BCA Student, Python, C, Data Science, Elims College, Web Developer">
   <meta name="author" content="Krishnajith PS">
   
+  <!-- Android Chrome & Mobile Web App Theming -->
+  <meta name="theme-color" content="#050505">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Krishnajith PS | Portfolio">
@@ -37,16 +44,16 @@
   <!-- NAVIGATION BAR                                               -->
   <!-- ============================================================ -->
   <header id="header" class="site-header fixed top-0 left-0 w-full z-50">
-    <div class="nav-container max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="nav-container max-w-7xl mx-auto px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#home" class="brand-logo flex items-center gap-3 group" id="nav-brand-link">
-        <div class="logo-badge">
+      <a href="#home" class="brand-logo flex items-center gap-2.5 sm:gap-3 group" id="nav-brand-link">
+        <div class="logo-badge flex-shrink-0">
           <span class="logo-text font-black text-amber">KPS</span>
         </div>
-        <div class="brand-name flex flex-col">
-          <span class="font-bold text-white tracking-wider text-sm group-hover:text-amber transition-colors">KRISHNAJITH PS</span>
-          <span class="text-xs text-muted font-medium">Portfolio</span>
+        <div class="brand-name flex flex-col min-w-0">
+          <span class="font-bold text-white tracking-wider text-xs sm:text-sm group-hover:text-amber transition-colors truncate">KRISHNAJITH PS</span>
+          <span class="text-[10px] sm:text-xs text-muted font-medium">Portfolio</span>
         </div>
       </a>
 
@@ -61,20 +68,20 @@
       </nav>
 
       <!-- Right Header Actions -->
-      <div class="header-right flex items-center gap-4">
+      <div class="header-right flex items-center gap-3 sm:gap-4">
         <a href="#contact" class="btn btn-primary-glow btn-sm hidden sm:inline-flex" id="nav-connect-btn">
           <span>Let's Connect</span>
           <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button type="button" class="mobile-menu-toggle md:hidden flex items-center justify-center p-2 rounded-lg text-light" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg class="menu-icon-bars" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Mobile Menu Toggle Button (Touch Friendly) -->
+        <button type="button" class="mobile-menu-toggle md:hidden flex items-center justify-center rounded-xl text-light" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="menu-icon-bars" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="4" y1="6" x2="20" y2="6"></line>
             <line x1="4" y1="12" x2="20" y2="12"></line>
             <line x1="4" y1="18" x2="20" y2="18"></line>
           </svg>
-          <svg class="menu-icon-close hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="menu-icon-close hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
@@ -85,14 +92,32 @@
 
     <!-- Mobile Drawer Menu -->
     <div id="mobile-nav-drawer" class="mobile-nav-drawer md:hidden" aria-hidden="true">
-      <div class="mobile-nav-content flex flex-col gap-4 p-6">
-        <a href="#home" class="mobile-nav-link active" data-section="home" id="mob-nav-home">Home</a>
-        <a href="#about" class="mobile-nav-link" data-section="about" id="mob-nav-about">About</a>
-        <a href="#skills" class="mobile-nav-link" data-section="skills" id="mob-nav-skills">Skills</a>
-        <a href="#projects" class="mobile-nav-link" data-section="projects" id="mob-nav-projects">Projects</a>
-        <a href="#education" class="mobile-nav-link" data-section="education" id="mob-nav-education">Education</a>
-        <a href="#contact" class="mobile-nav-link" data-section="contact" id="mob-nav-contact">Contact</a>
-        <div class="pt-4 border-t border-gold-subtle">
+      <div class="mobile-nav-content flex flex-col gap-2 p-5 sm:p-6">
+        <a href="#home" class="mobile-nav-link active" data-section="home" id="mob-nav-home">
+          <span>Home</span>
+          <span class="mob-link-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#about" class="mobile-nav-link" data-section="about" id="mob-nav-about">
+          <span>About</span>
+          <span class="mob-link-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#skills" class="mobile-nav-link" data-section="skills" id="mob-nav-skills">
+          <span>Skills</span>
+          <span class="mob-link-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#projects" class="mobile-nav-link" data-section="projects" id="mob-nav-projects">
+          <span>Projects</span>
+          <span class="mob-link-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#education" class="mobile-nav-link" data-section="education" id="mob-nav-education">
+          <span>Education</span>
+          <span class="mob-link-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#contact" class="mobile-nav-link" data-section="contact" id="mob-nav-contact">
+          <span>Contact</span>
+          <span class="mob-link-indicator" aria-hidden="true"></span>
+        </a>
+        <div class="pt-4 mt-2 border-t border-gold-subtle">
           <a href="#contact" class="btn btn-primary-glow w-full justify-center" id="mob-connect-btn">
             <span>Let's Connect</span>
             <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -107,52 +132,52 @@
     <!-- ============================================================ -->
     <!-- HERO SECTION                                                 -->
     <!-- ============================================================ -->
-    <section id="home" class="hero-section min-h-screen flex items-center pt-28 pb-20 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 w-full">
-        <div class="hero-grid grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <section id="home" class="hero-section min-h-screen flex items-center pt-24 sm:pt-28 pb-16 sm:pb-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+        <div class="hero-grid grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           <!-- Hero Left Column -->
-          <div class="hero-content lg:col-span-7 flex flex-col items-start space-y-6">
+          <div class="hero-content lg:col-span-7 flex flex-col items-start space-y-5 sm:space-y-6">
             
             <!-- Small Pill Badge -->
-            <div class="pill-badge inline-flex items-center gap-2.5 px-4 py-2 rounded-full" id="hero-pill-badge">
+            <div class="pill-badge inline-flex items-center gap-2.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full" id="hero-pill-badge">
               <span class="pulsing-dot" aria-hidden="true"></span>
-              <span class="text-xs font-semibold uppercase tracking-wider text-amber-light">Currently Learning &amp; Building</span>
+              <span class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-amber-light">Currently Learning &amp; Building</span>
             </div>
 
             <!-- Main Heading -->
             <div class="hero-heading-group">
-              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                <span class="block text-2xl sm:text-3xl font-medium text-muted-light mb-2">Hi, I'm</span>
-                <span class="gradient-text-gold font-black block text-5xl sm:text-6xl lg:text-7xl mb-1">Krishnajith PS</span>
+              <h1 class="text-3xl min-[380px]:text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                <span class="block text-xl min-[380px]:text-2xl sm:text-3xl font-medium text-muted-light mb-1 sm:mb-2">Hi, I'm</span>
+                <span class="gradient-text-gold font-black block text-4xl min-[380px]:text-5xl sm:text-6xl lg:text-7xl mb-1 hero-name-title">Krishnajith PS</span>
               </h1>
-              <h2 class="hero-subtitle text-xl sm:text-2xl font-semibold text-amber-200 mt-3 flex items-center gap-2">
-                <span class="inline-block w-6 h-0.5 bg-amber"></span>
+              <h2 class="hero-subtitle text-lg sm:text-2xl font-semibold text-amber-200 mt-2 sm:mt-3 flex items-center gap-2">
+                <span class="inline-block w-4 sm:w-6 h-0.5 bg-amber flex-shrink-0"></span>
                 <span>BCA Student &amp; Aspiring Developer</span>
               </h2>
             </div>
 
             <!-- Description -->
-            <p class="hero-description text-base sm:text-lg text-muted-light leading-relaxed max-w-xl">
+            <p class="hero-description text-sm sm:text-base lg:text-lg text-muted-light leading-relaxed max-w-xl">
               I'm a 2nd-year BCA student at <strong class="text-white font-medium">Elims College of Arts and Science</strong>, passionate about programming, data science, software development, and exploring new technologies.
             </p>
 
             <!-- Action Buttons -->
-            <div class="hero-cta-buttons flex flex-wrap items-center gap-4 pt-2">
-              <a href="#projects" class="btn btn-primary-glow" id="hero-view-projects-btn">
+            <div class="hero-cta-buttons flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
+              <a href="#projects" class="btn btn-primary-glow justify-center" id="hero-view-projects-btn">
                 <span>View My Projects</span>
                 <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
-              <a href="#contact" class="btn btn-glass-outline" id="hero-connect-btn">
+              <a href="#contact" class="btn btn-glass-outline justify-center" id="hero-connect-btn">
                 <span>Let's Connect</span>
                 <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
 
             <!-- Social Connect Strip -->
-            <div class="hero-social-strip pt-4 flex flex-col sm:flex-row sm:items-center gap-3">
-              <span class="text-xs uppercase tracking-wider text-muted font-semibold">Connect with me:</span>
-              <div class="social-icons-group flex items-center gap-3">
+            <div class="hero-social-strip pt-3 sm:pt-4 flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3">
+              <span class="text-[11px] sm:text-xs uppercase tracking-wider text-muted font-semibold">Connect with me:</span>
+              <div class="social-icons-group flex items-center gap-2.5 sm:gap-3">
                 <a href="#contact" class="social-icon-btn" title="GitHub Profile (Editable)" aria-label="GitHub">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
@@ -171,8 +196,8 @@
           </div>
 
           <!-- Hero Right Column: Krishnajith's Portrait & Halo FX -->
-          <div class="hero-portrait-col lg:col-span-5 flex justify-center lg:justify-end relative">
-            <div class="portrait-stage relative">
+          <div class="hero-portrait-col lg:col-span-5 flex justify-center lg:justify-end relative w-full">
+            <div class="portrait-stage relative mx-auto">
               
               <!-- Multi-layered Glowing Halos -->
               <div class="halo-aura halo-primary" aria-hidden="true"></div>
@@ -183,28 +208,28 @@
               <!-- Badge 1: Python -->
               <div class="floating-tech-badge badge-python floating-anim-1" id="float-badge-python">
                 <div class="tech-badge-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <path d="M11.91 2C6.44 2 6.78 4.38 6.78 4.38L6.79 6.84H12.01V7.6H4.29S2 7.33 2 12.83C2 18.33 4 18.06 4 18.06H6.38V15.54C6.38 15.54 6.25 12.5 9.32 12.5H14.54C14.54 12.5 17.39 12.63 17.39 9.87V4.38S17.65 2 11.91 2ZM9.37 3.54C9.87 3.54 10.28 3.95 10.28 4.45C10.28 4.95 9.87 5.36 9.37 5.36C8.87 5.36 8.46 4.95 8.46 4.45C8.46 3.95 8.87 3.54 9.37 3.54Z" fill="#fbbf24"/>
                     <path d="M12.09 22C17.56 22 17.22 19.62 17.22 19.62L17.21 17.16H11.99V16.4H19.71S22 16.67 22 11.17C22 5.67 20 5.94 20 5.94H17.62V8.46C17.62 8.46 17.75 11.5 14.68 11.5H9.46C9.46 11.5 6.61 11.37 6.61 14.13V19.62S6.35 22 12.09 22ZM14.63 20.46C14.13 20.46 13.72 20.05 13.72 19.55C13.72 19.05 14.13 18.64 14.63 18.64C15.13 18.64 15.54 19.05 15.54 19.55C15.54 20.05 15.13 20.46 14.63 20.46Z" fill="#ffd700"/>
                   </svg>
                 </div>
-                <span class="tech-badge-label font-bold text-xs text-light">Python</span>
+                <span class="tech-badge-label font-bold text-[11px] sm:text-xs text-light">Python</span>
               </div>
 
               <!-- Badge 2: C Language -->
               <div class="floating-tech-badge badge-c floating-anim-2" id="float-badge-c">
                 <div class="tech-badge-icon">
-                  <span class="font-extrabold text-amber text-sm font-mono">C</span>
+                  <span class="font-extrabold text-amber text-xs sm:text-sm font-mono">C</span>
                 </div>
-                <span class="tech-badge-label font-bold text-xs text-light">C Lang</span>
+                <span class="tech-badge-label font-bold text-[11px] sm:text-xs text-light">C Lang</span>
               </div>
 
               <!-- Badge 3: Code </> -->
               <div class="floating-tech-badge badge-code floating-anim-3" id="float-badge-code">
                 <div class="tech-badge-icon">
-                  <span class="font-mono font-black text-amber-light text-xs">&lt;/&gt;</span>
+                  <span class="font-mono font-black text-amber-light text-[11px] sm:text-xs">&lt;/&gt;</span>
                 </div>
-                <span class="tech-badge-label font-bold text-xs text-light">Developer</span>
+                <span class="tech-badge-label font-bold text-[11px] sm:text-xs text-light">Dev</span>
               </div>
 
               <!-- Portrait Frame & Actual Photo -->
@@ -229,18 +254,18 @@
     <!-- ============================================================ -->
     <!-- ABOUT ME SECTION                                             -->
     <!-- ============================================================ -->
-    <section id="about" class="about-section py-20 relative">
-      <div class="max-w-7xl mx-auto px-6">
+    <section id="about" class="about-section py-16 sm:py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div class="section-header text-center mb-12">
-          <span class="section-tag uppercase text-amber tracking-widest text-xs font-bold">Introduction</span>
-          <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-white mt-2">About Me</h2>
-          <div class="section-divider mx-auto mt-3"></div>
+        <div class="section-header text-center mb-10 sm:mb-12">
+          <span class="section-tag uppercase text-amber tracking-widest text-[11px] sm:text-xs font-bold">Introduction</span>
+          <h2 class="section-title text-2xl sm:text-4xl font-extrabold text-white mt-1.5 sm:mt-2">About Me</h2>
+          <div class="section-divider mx-auto mt-2.5 sm:mt-3"></div>
         </div>
 
         <!-- Large Horizontal Glassmorphism Card -->
-        <div class="about-glass-card glass-panel rounded-3xl p-8 lg:p-10 relative overflow-hidden" id="about-card">
-          <div class="about-grid grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="about-glass-card glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 relative overflow-hidden" id="about-card">
+          <div class="about-grid grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             
             <!-- Left: Circular Crop of Uploaded Portrait -->
             <div class="about-avatar-col lg:col-span-3 flex justify-center">
@@ -257,63 +282,63 @@
             </div>
 
             <!-- Center: Biography & Personal Statement -->
-            <div class="about-content-col lg:col-span-5 space-y-4">
-              <div class="flex items-center gap-2">
-                <span class="w-8 h-0.5 bg-amber"></span>
+            <div class="about-content-col lg:col-span-5 space-y-3 sm:space-y-4 text-center lg:text-left">
+              <div class="flex items-center justify-center lg:justify-start gap-2">
+                <span class="w-6 sm:w-8 h-0.5 bg-amber"></span>
                 <h3 class="text-xl sm:text-2xl font-bold text-white">Krishnajith PS</h3>
               </div>
-              <p class="text-muted-light text-base leading-relaxed">
+              <p class="text-muted-light text-sm sm:text-base leading-relaxed">
                 Hi, I'm <strong class="text-white">Krishnajith PS</strong>, a 2nd-year BCA student at <span class="text-amber-light font-medium">Elims College of Arts and Science</span>. I'm interested in programming, data science, software development, and emerging technologies.
               </p>
-              <p class="text-muted-light text-base leading-relaxed">
+              <p class="text-muted-light text-sm sm:text-base leading-relaxed">
                 I enjoy solving problems through code and continuously improving my technical skills to build efficient, scalable, and responsive digital solutions.
               </p>
             </div>
 
             <!-- Right: 4 Academic & Interest Info Blocks with Golden Icons -->
-            <div class="about-info-col lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            <div class="about-info-col lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4">
               
               <!-- Block 1: Education -->
-              <div class="about-info-item flex items-start gap-3.5 p-3.5 rounded-xl bg-black-glass border border-gold-subtle">
-                <div class="info-icon-box text-amber flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <div class="about-info-item flex items-start gap-3 p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle">
+                <div class="info-icon-box text-amber flex-shrink-0 mt-0.5">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
                 </div>
-                <div>
-                  <span class="block text-xs uppercase font-bold text-amber tracking-wider">Education</span>
-                  <span class="text-sm font-semibold text-white">BCA – Bachelor of Computer Applications</span>
+                <div class="min-w-0">
+                  <span class="block text-[10px] sm:text-xs uppercase font-bold text-amber tracking-wider">Education</span>
+                  <span class="text-xs sm:text-sm font-semibold text-white">BCA – Computer Applications</span>
                 </div>
               </div>
 
               <!-- Block 2: Year -->
-              <div class="about-info-item flex items-start gap-3.5 p-3.5 rounded-xl bg-black-glass border border-gold-subtle">
-                <div class="info-icon-box text-amber flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <div class="about-info-item flex items-start gap-3 p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle">
+                <div class="info-icon-box text-amber flex-shrink-0 mt-0.5">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                 </div>
-                <div>
-                  <span class="block text-xs uppercase font-bold text-amber tracking-wider">Year</span>
-                  <span class="text-sm font-semibold text-white">2nd Year</span>
+                <div class="min-w-0">
+                  <span class="block text-[10px] sm:text-xs uppercase font-bold text-amber tracking-wider">Year</span>
+                  <span class="text-xs sm:text-sm font-semibold text-white">2nd Year</span>
                 </div>
               </div>
 
               <!-- Block 3: College -->
-              <div class="about-info-item flex items-start gap-3.5 p-3.5 rounded-xl bg-black-glass border border-gold-subtle">
-                <div class="info-icon-box text-amber flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <div class="about-info-item flex items-start gap-3 p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle">
+                <div class="info-icon-box text-amber flex-shrink-0 mt-0.5">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                 </div>
-                <div>
-                  <span class="block text-xs uppercase font-bold text-amber tracking-wider">College</span>
-                  <span class="text-sm font-semibold text-white">Elims College of Arts and Science</span>
+                <div class="min-w-0">
+                  <span class="block text-[10px] sm:text-xs uppercase font-bold text-amber tracking-wider">College</span>
+                  <span class="text-xs sm:text-sm font-semibold text-white">Elims College of Arts and Science</span>
                 </div>
               </div>
 
               <!-- Block 4: Interests -->
-              <div class="about-info-item flex items-start gap-3.5 p-3.5 rounded-xl bg-black-glass border border-gold-subtle">
-                <div class="info-icon-box text-amber flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <div class="about-info-item flex items-start gap-3 p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle">
+                <div class="info-icon-box text-amber flex-shrink-0 mt-0.5">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                 </div>
-                <div>
-                  <span class="block text-xs uppercase font-bold text-amber tracking-wider">Interests</span>
-                  <span class="text-xs font-semibold text-muted-light">Programming • Data Science • Software Dev • Technology</span>
+                <div class="min-w-0">
+                  <span class="block text-[10px] sm:text-xs uppercase font-bold text-amber tracking-wider">Interests</span>
+                  <span class="text-xs font-semibold text-muted-light">Programming • Data Science • Tech</span>
                 </div>
               </div>
 
@@ -328,111 +353,111 @@
     <!-- ============================================================ -->
     <!-- TECHNICAL SKILLS & BADGES SECTION                            -->
     <!-- ============================================================ -->
-    <section id="skills" class="skills-section py-20 relative">
-      <div class="max-w-7xl mx-auto px-6">
+    <section id="skills" class="skills-section py-16 sm:py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div class="section-header text-center mb-16">
-          <span class="section-tag uppercase text-amber tracking-widest text-xs font-bold">Capabilities &amp; Stack</span>
-          <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-white mt-2">Technical Skills</h2>
-          <p class="text-muted text-sm sm:text-base max-w-lg mx-auto mt-3">Core programming languages, data manipulation packages, and development tools I work with.</p>
-          <div class="section-divider mx-auto mt-3"></div>
+        <div class="section-header text-center mb-12 sm:mb-16">
+          <span class="section-tag uppercase text-amber tracking-widest text-[11px] sm:text-xs font-bold">Capabilities &amp; Stack</span>
+          <h2 class="section-title text-2xl sm:text-4xl font-extrabold text-white mt-1.5 sm:mt-2">Technical Skills</h2>
+          <p class="text-muted text-xs sm:text-base max-w-lg mx-auto mt-2 sm:mt-3">Core programming languages, data manipulation packages, and development tools I work with.</p>
+          <div class="section-divider mx-auto mt-2.5 sm:mt-3"></div>
         </div>
 
         <!-- 10 Circular Glowing Skill Badges Grid -->
-        <div class="skills-badges-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-16">
+        <div class="skills-badges-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 sm:gap-6 mb-12 sm:mb-16">
           
           <!-- Skill 1: Python -->
           <div class="skill-badge-card glass-panel group" id="skill-python">
             <div class="skill-icon-halo">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" class="text-amber group-hover:scale-110 transition-transform">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" class="text-amber group-hover:scale-110 transition-transform">
                 <path d="M11.91 2C6.44 2 6.78 4.38 6.78 4.38L6.79 6.84H12.01V7.6H4.29S2 7.33 2 12.83C2 18.33 4 18.06 4 18.06H6.38V15.54C6.38 15.54 6.25 12.5 9.32 12.5H14.54C14.54 12.5 17.39 12.63 17.39 9.87V4.38S17.65 2 11.91 2ZM9.37 3.54C9.87 3.54 10.28 3.95 10.28 4.45C10.28 4.95 9.87 5.36 9.37 5.36C8.87 5.36 8.46 4.95 8.46 4.45C8.46 3.95 8.87 3.54 9.37 3.54Z"/>
               </svg>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">Python</h3>
-            <span class="skill-category text-xs text-amber font-medium">Programming</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">Python</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Programming</span>
           </div>
 
           <!-- Skill 2: C -->
           <div class="skill-badge-card glass-panel group" id="skill-c">
             <div class="skill-icon-halo">
-              <span class="font-mono font-black text-2xl text-amber group-hover:scale-110 transition-transform">C</span>
+              <span class="font-mono font-black text-xl sm:text-2xl text-amber group-hover:scale-110 transition-transform">C</span>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">C</h3>
-            <span class="skill-category text-xs text-amber font-medium">Programming</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">C</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Programming</span>
           </div>
 
           <!-- Skill 3: NumPy -->
           <div class="skill-badge-card glass-panel group" id="skill-numpy">
             <div class="skill-icon-halo">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
                 <rect x="3" y="3" width="18" height="18" rx="2"></rect>
                 <path d="M7 8v8l5-8v8"></path>
                 <path d="M17 8v8"></path>
               </svg>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">NumPy</h3>
-            <span class="skill-category text-xs text-amber font-medium">Data Analysis</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">NumPy</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Data Analysis</span>
           </div>
 
           <!-- Skill 4: Pandas -->
           <div class="skill-badge-card glass-panel group" id="skill-pandas">
             <div class="skill-icon-halo">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
                 <line x1="18" y1="20" x2="18" y2="10"></line>
                 <line x1="12" y1="20" x2="12" y2="4"></line>
                 <line x1="6" y1="20" x2="6" y2="14"></line>
               </svg>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">Pandas</h3>
-            <span class="skill-category text-xs text-amber font-medium">Data Analysis</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">Pandas</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Data Analysis</span>
           </div>
 
           <!-- Skill 5: HTML -->
           <div class="skill-badge-card glass-panel group" id="skill-html">
             <div class="skill-icon-halo">
-              <span class="font-mono font-black text-xl text-amber group-hover:scale-110 transition-transform">&lt;5&gt;</span>
+              <span class="font-mono font-black text-lg sm:text-xl text-amber group-hover:scale-110 transition-transform">&lt;5&gt;</span>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">HTML</h3>
-            <span class="skill-category text-xs text-amber font-medium">Web Development</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">HTML</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Web Development</span>
           </div>
 
           <!-- Skill 6: CSS -->
           <div class="skill-badge-card glass-panel group" id="skill-css">
             <div class="skill-icon-halo">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
                 <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3z"></path>
               </svg>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">CSS</h3>
-            <span class="skill-category text-xs text-amber font-medium">Web Development</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">CSS</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Web Development</span>
           </div>
 
           <!-- Skill 7: JavaScript -->
           <div class="skill-badge-card glass-panel group" id="skill-js">
             <div class="skill-icon-halo">
-              <span class="font-mono font-black text-xl text-amber group-hover:scale-110 transition-transform">JS</span>
+              <span class="font-mono font-black text-lg sm:text-xl text-amber group-hover:scale-110 transition-transform">JS</span>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">JavaScript</h3>
-            <span class="skill-category text-xs text-amber font-medium">Web Development</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">JavaScript</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Web Development</span>
           </div>
 
           <!-- Skill 8: SQL -->
           <div class="skill-badge-card glass-panel group" id="skill-sql">
             <div class="skill-icon-halo">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
                 <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                 <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
                 <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
               </svg>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">SQL</h3>
-            <span class="skill-category text-xs text-amber font-medium">Database</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">SQL</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Database</span>
           </div>
 
           <!-- Skill 9: Git -->
           <div class="skill-badge-card glass-panel group" id="skill-git">
             <div class="skill-icon-halo">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber group-hover:scale-110 transition-transform">
                 <circle cx="18" cy="18" r="3"></circle>
                 <circle cx="6" cy="6" r="3"></circle>
                 <circle cx="6" cy="18" r="3"></circle>
@@ -440,19 +465,19 @@
                 <line x1="6" y1="9" x2="6" y2="15"></line>
               </svg>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">Git</h3>
-            <span class="skill-category text-xs text-amber font-medium">Version Control</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">Git</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Version Control</span>
           </div>
 
           <!-- Skill 10: GitHub -->
           <div class="skill-badge-card glass-panel group" id="skill-github">
             <div class="skill-icon-halo">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" class="text-amber group-hover:scale-110 transition-transform">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" class="text-amber group-hover:scale-110 transition-transform">
                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
               </svg>
             </div>
-            <h3 class="skill-name font-bold text-white text-base mt-3">GitHub</h3>
-            <span class="skill-category text-xs text-amber font-medium">Version Control</span>
+            <h3 class="skill-name font-bold text-white text-sm sm:text-base mt-2.5 sm:mt-3">GitHub</h3>
+            <span class="skill-category text-[11px] sm:text-xs text-amber font-medium">Version Control</span>
           </div>
 
         </div>
@@ -460,15 +485,15 @@
         <!-- ============================================================ -->
         <!-- SKILLS CATEGORIES (GOLDEN/ORANGE CARD)                       -->
         <!-- ============================================================ -->
-        <div class="skills-categories-card rounded-3xl p-8 lg:p-10 shadow-2xl relative overflow-hidden" id="skills-categories-card">
+        <div class="skills-categories-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden" id="skills-categories-card">
           <div class="card-bg-watermark font-black select-none pointer-events-none" aria-hidden="true">STACK</div>
           
-          <div class="flex items-center gap-3 mb-8">
-            <div class="w-3 h-8 bg-black rounded-full"></div>
-            <h3 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Skills Categories</h3>
+          <div class="flex items-center gap-2.5 sm:gap-3 mb-6 sm:mb-8">
+            <div class="w-2.5 sm:w-3 h-6 sm:h-8 bg-black rounded-full"></div>
+            <h3 class="text-xl sm:text-3xl font-black text-black tracking-tight">Skills Categories</h3>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             
             <!-- Column 1: PROGRAMMING -->
             <div class="category-col">
@@ -575,92 +600,92 @@
     <!-- ============================================================ -->
     <!-- CURRENTLY LEARNING SECTION                                   -->
     <!-- ============================================================ -->
-    <section id="learning" class="learning-section py-20 relative">
-      <div class="max-w-7xl mx-auto px-6">
+    <section id="learning" class="learning-section py-16 sm:py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div class="section-header text-center mb-16">
-          <span class="section-tag uppercase text-amber tracking-widest text-xs font-bold">Continuous Growth</span>
-          <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-white mt-2">Currently Learning</h2>
-          <p class="text-muted text-sm sm:text-base max-w-lg mx-auto mt-3">Subjects and technologies I am actively studying and practicing in my 2nd-year curriculum.</p>
-          <div class="section-divider mx-auto mt-3"></div>
+        <div class="section-header text-center mb-12 sm:mb-16">
+          <span class="section-tag uppercase text-amber tracking-widest text-[11px] sm:text-xs font-bold">Continuous Growth</span>
+          <h2 class="section-title text-2xl sm:text-4xl font-extrabold text-white mt-1.5 sm:mt-2">Currently Learning</h2>
+          <p class="text-muted text-xs sm:text-base max-w-lg mx-auto mt-2 sm:mt-3">Subjects and technologies I am actively studying and practicing in my 2nd-year curriculum.</p>
+          <div class="section-divider mx-auto mt-2.5 sm:mt-3"></div>
         </div>
 
         <!-- 6 Dark Cards with Golden Borders & Subtle Progress -->
-        <div class="learning-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="learning-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           
           <!-- Card 1 -->
-          <div class="learning-card glass-panel p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
-            <div class="flex items-center justify-between mb-4">
-              <span class="learning-badge text-xs font-bold px-3 py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
-              <span class="text-xs font-mono text-muted">In Progress</span>
+          <div class="learning-card glass-panel p-4 sm:p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="learning-badge text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
+              <span class="text-[11px] sm:text-xs font-mono text-muted">In Progress</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Advanced Python</h3>
-            <p class="text-xs text-muted-light mb-4">Mastering OOP patterns, decorators, generators, and efficient data processing.</p>
+            <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2">Advanced Python</h3>
+            <p class="text-xs text-muted-light mb-3 sm:mb-4 leading-relaxed">Mastering OOP patterns, decorators, generators, and efficient data processing.</p>
             <div class="progress-bar-bg w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
               <div class="progress-bar-fill h-full bg-gradient-gold" style="width: 75%;"></div>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="learning-card glass-panel p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
-            <div class="flex items-center justify-between mb-4">
-              <span class="learning-badge text-xs font-bold px-3 py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
-              <span class="text-xs font-mono text-muted">In Progress</span>
+          <div class="learning-card glass-panel p-4 sm:p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="learning-badge text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
+              <span class="text-[11px] sm:text-xs font-mono text-muted">In Progress</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Data Science</h3>
-            <p class="text-xs text-muted-light mb-4">Studying data wrangling, statistical distributions, Pandas, and exploratory data analysis.</p>
+            <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2">Data Science</h3>
+            <p class="text-xs text-muted-light mb-3 sm:mb-4 leading-relaxed">Studying data wrangling, statistical distributions, Pandas, and exploratory data analysis.</p>
             <div class="progress-bar-bg w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
               <div class="progress-bar-fill h-full bg-gradient-gold" style="width: 65%;"></div>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="learning-card glass-panel p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
-            <div class="flex items-center justify-between mb-4">
-              <span class="learning-badge text-xs font-bold px-3 py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
-              <span class="text-xs font-mono text-muted">In Progress</span>
+          <div class="learning-card glass-panel p-4 sm:p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="learning-badge text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
+              <span class="text-[11px] sm:text-xs font-mono text-muted">In Progress</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Machine Learning</h3>
-            <p class="text-xs text-muted-light mb-4">Exploring foundational supervised learning algorithms and mathematical principles.</p>
+            <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2">Machine Learning</h3>
+            <p class="text-xs text-muted-light mb-3 sm:mb-4 leading-relaxed">Exploring foundational supervised learning algorithms and mathematical principles.</p>
             <div class="progress-bar-bg w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
               <div class="progress-bar-fill h-full bg-gradient-gold" style="width: 50%;"></div>
             </div>
           </div>
 
           <!-- Card 4 -->
-          <div class="learning-card glass-panel p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
-            <div class="flex items-center justify-between mb-4">
-              <span class="learning-badge text-xs font-bold px-3 py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
-              <span class="text-xs font-mono text-muted">In Progress</span>
+          <div class="learning-card glass-panel p-4 sm:p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="learning-badge text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
+              <span class="text-[11px] sm:text-xs font-mono text-muted">In Progress</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">SQL</h3>
-            <p class="text-xs text-muted-light mb-4">Designing relational schemas, joins, subqueries, and database indexing strategies.</p>
+            <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2">SQL</h3>
+            <p class="text-xs text-muted-light mb-3 sm:mb-4 leading-relaxed">Designing relational schemas, joins, subqueries, and database indexing strategies.</p>
             <div class="progress-bar-bg w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
               <div class="progress-bar-fill h-full bg-gradient-gold" style="width: 70%;"></div>
             </div>
           </div>
 
           <!-- Card 5 -->
-          <div class="learning-card glass-panel p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
-            <div class="flex items-center justify-between mb-4">
-              <span class="learning-badge text-xs font-bold px-3 py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
-              <span class="text-xs font-mono text-muted">In Progress</span>
+          <div class="learning-card glass-panel p-4 sm:p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="learning-badge text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
+              <span class="text-[11px] sm:text-xs font-mono text-muted">In Progress</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Web Development</h3>
-            <p class="text-xs text-muted-light mb-4">Building responsive modern interfaces using semantic HTML5, modern CSS3, and DOM JS.</p>
+            <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2">Web Development</h3>
+            <p class="text-xs text-muted-light mb-3 sm:mb-4 leading-relaxed">Building responsive modern interfaces using semantic HTML5, modern CSS3, and DOM JS.</p>
             <div class="progress-bar-bg w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
               <div class="progress-bar-fill h-full bg-gradient-gold" style="width: 80%;"></div>
             </div>
           </div>
 
           <!-- Card 6 -->
-          <div class="learning-card glass-panel p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
-            <div class="flex items-center justify-between mb-4">
-              <span class="learning-badge text-xs font-bold px-3 py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
-              <span class="text-xs font-mono text-muted">In Progress</span>
+          <div class="learning-card glass-panel p-4 sm:p-6 rounded-2xl border border-gold-subtle hover:border-gold transition-all duration-300">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="learning-badge text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-amber-subtle text-amber border border-amber/30">Learning</span>
+              <span class="text-[11px] sm:text-xs font-mono text-muted">In Progress</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Git &amp; GitHub</h3>
-            <p class="text-xs text-muted-light mb-4">Practicing version control workflows, branching, pull requests, and commit discipline.</p>
+            <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2">Git &amp; GitHub</h3>
+            <p class="text-xs text-muted-light mb-3 sm:mb-4 leading-relaxed">Practicing version control workflows, branching, pull requests, and commit discipline.</p>
             <div class="progress-bar-bg w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
               <div class="progress-bar-fill h-full bg-gradient-gold" style="width: 85%;"></div>
             </div>
@@ -674,43 +699,43 @@
     <!-- ============================================================ -->
     <!-- FEATURED PROJECTS SECTION                                    -->
     <!-- ============================================================ -->
-    <section id="projects" class="projects-section py-20 relative">
-      <div class="max-w-7xl mx-auto px-6">
+    <section id="projects" class="projects-section py-16 sm:py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div class="section-header text-center mb-16">
-          <span class="section-tag uppercase text-amber tracking-widest text-xs font-bold">Academic &amp; Practical Work</span>
-          <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-white mt-2">Featured Projects</h2>
-          <p class="text-muted text-sm sm:text-base max-w-xl mx-auto mt-3">Projects demonstrating programming logic, data analysis, algorithm design, and web development.</p>
-          <div class="section-divider mx-auto mt-3"></div>
+        <div class="section-header text-center mb-12 sm:mb-16">
+          <span class="section-tag uppercase text-amber tracking-widest text-[11px] sm:text-xs font-bold">Academic &amp; Practical Work</span>
+          <h2 class="section-title text-2xl sm:text-4xl font-extrabold text-white mt-1.5 sm:mt-2">Featured Projects</h2>
+          <p class="text-muted text-xs sm:text-base max-w-xl mx-auto mt-2 sm:mt-3">Projects demonstrating programming logic, data analysis, algorithm design, and web development.</p>
+          <div class="section-divider mx-auto mt-2.5 sm:mt-3"></div>
         </div>
 
-        <!-- 4-Column Project Grid on Desktop -->
-        <div class="projects-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 4-Column Project Grid on Desktop / Responsive 1-2 on Mobile -->
+        <div class="projects-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           
           <!-- Project Card 1: Python Project -->
           <div class="project-card glass-panel rounded-2xl overflow-hidden flex flex-col group border border-gold-subtle hover:border-gold transition-all duration-300" id="project-card-1">
-            <div class="project-img-wrapper relative overflow-hidden aspect-video">
+            <div class="project-img-wrapper view-project-modal-btn relative overflow-hidden aspect-video cursor-pointer" data-project="1" role="button" tabindex="0" aria-label="Open Python Project Details">
               <img src="assets/images/project-python.jpg" 
                    alt="Python Project Preview" 
                    class="project-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy">
               <div class="project-img-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                <button type="button" class="view-project-modal-btn p-2.5 rounded-full bg-amber text-black hover:scale-110 transition-transform" data-project="1" title="Quick View" aria-label="View Python Project">
+                <span class="p-2.5 rounded-full bg-amber text-black hover:scale-110 transition-transform shadow-lg">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </button>
+                </span>
               </div>
             </div>
             
-            <div class="project-card-body p-6 flex flex-col flex-grow">
-              <div class="tech-tags flex flex-wrap gap-2 mb-3">
-                <span class="tag-pill text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">Python</span>
+            <div class="project-card-body p-4 sm:p-6 flex flex-col flex-grow">
+              <div class="tech-tags flex flex-wrap gap-2 mb-2.5 sm:mb-3">
+                <span class="tag-pill text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">Python</span>
               </div>
-              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber transition-colors">Python Project</h3>
-              <p class="text-xs text-muted-light leading-relaxed mb-6 flex-grow">
+              <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2 group-hover:text-amber transition-colors">Python Project</h3>
+              <p class="text-xs text-muted-light leading-relaxed mb-4 sm:mb-6 flex-grow">
                 A Python-based application demonstrating programming concepts, logical thinking and problem solving.
               </p>
               
-              <div class="project-card-footer pt-4 border-t border-gold-subtle/50 flex items-center justify-between">
+              <div class="project-card-footer pt-3 sm:pt-4 border-t border-gold-subtle/50 flex items-center justify-between">
                 <div class="project-links flex items-center gap-2">
                   <a href="#contact" class="icon-link text-muted hover:text-amber transition-colors" title="GitHub Repository" aria-label="GitHub Repository">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -729,29 +754,29 @@
 
           <!-- Project Card 2: Data Analysis Project -->
           <div class="project-card glass-panel rounded-2xl overflow-hidden flex flex-col group border border-gold-subtle hover:border-gold transition-all duration-300" id="project-card-2">
-            <div class="project-img-wrapper relative overflow-hidden aspect-video bg-black">
+            <div class="project-img-wrapper view-project-modal-btn relative overflow-hidden aspect-video bg-black cursor-pointer" data-project="2" role="button" tabindex="0" aria-label="Open Data Analysis Project Details">
               <img src="assets/images/project-data-analysis.svg" 
                    alt="Data Analysis Project Preview" 
                    class="project-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy">
               <div class="project-img-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                <button type="button" class="view-project-modal-btn p-2.5 rounded-full bg-amber text-black hover:scale-110 transition-transform" data-project="2" title="Quick View" aria-label="View Data Analysis Project">
+                <span class="p-2.5 rounded-full bg-amber text-black hover:scale-110 transition-transform shadow-lg">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </button>
+                </span>
               </div>
             </div>
             
-            <div class="project-card-body p-6 flex flex-col flex-grow">
-              <div class="tech-tags flex flex-wrap gap-2 mb-3">
-                <span class="tag-pill text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">NumPy</span>
-                <span class="tag-pill text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">Pandas</span>
+            <div class="project-card-body p-4 sm:p-6 flex flex-col flex-grow">
+              <div class="tech-tags flex flex-wrap gap-2 mb-2.5 sm:mb-3">
+                <span class="tag-pill text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">NumPy</span>
+                <span class="tag-pill text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">Pandas</span>
               </div>
-              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber transition-colors">Data Analysis Project</h3>
-              <p class="text-xs text-muted-light leading-relaxed mb-6 flex-grow">
+              <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2 group-hover:text-amber transition-colors">Data Analysis Project</h3>
+              <p class="text-xs text-muted-light leading-relaxed mb-4 sm:mb-6 flex-grow">
                 A data analysis project using Python, NumPy and Pandas to process and analyze datasets.
               </p>
               
-              <div class="project-card-footer pt-4 border-t border-gold-subtle/50 flex items-center justify-between">
+              <div class="project-card-footer pt-3 sm:pt-4 border-t border-gold-subtle/50 flex items-center justify-between">
                 <div class="project-links flex items-center gap-2">
                   <a href="#contact" class="icon-link text-muted hover:text-amber transition-colors" title="GitHub Repository" aria-label="GitHub Repository">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -770,28 +795,28 @@
 
           <!-- Project Card 3: C Programming Project -->
           <div class="project-card glass-panel rounded-2xl overflow-hidden flex flex-col group border border-gold-subtle hover:border-gold transition-all duration-300" id="project-card-3">
-            <div class="project-img-wrapper relative overflow-hidden aspect-video bg-black">
+            <div class="project-img-wrapper view-project-modal-btn relative overflow-hidden aspect-video bg-black cursor-pointer" data-project="3" role="button" tabindex="0" aria-label="Open C Project Details">
               <img src="assets/images/project-c.svg" 
                    alt="C Programming Project Preview" 
                    class="project-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy">
               <div class="project-img-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                <button type="button" class="view-project-modal-btn p-2.5 rounded-full bg-amber text-black hover:scale-110 transition-transform" data-project="3" title="Quick View" aria-label="View C Programming Project">
+                <span class="p-2.5 rounded-full bg-amber text-black hover:scale-110 transition-transform shadow-lg">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </button>
+                </span>
               </div>
             </div>
             
-            <div class="project-card-body p-6 flex flex-col flex-grow">
-              <div class="tech-tags flex flex-wrap gap-2 mb-3">
-                <span class="tag-pill text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">C Language</span>
+            <div class="project-card-body p-4 sm:p-6 flex flex-col flex-grow">
+              <div class="tech-tags flex flex-wrap gap-2 mb-2.5 sm:mb-3">
+                <span class="tag-pill text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">C Language</span>
               </div>
-              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber transition-colors">C Programming Project</h3>
-              <p class="text-xs text-muted-light leading-relaxed mb-6 flex-grow">
+              <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2 group-hover:text-amber transition-colors">C Programming Project</h3>
+              <p class="text-xs text-muted-light leading-relaxed mb-4 sm:mb-6 flex-grow">
                 A console-based application demonstrating C programming fundamentals and logical problem solving.
               </p>
               
-              <div class="project-card-footer pt-4 border-t border-gold-subtle/50 flex items-center justify-between">
+              <div class="project-card-footer pt-3 sm:pt-4 border-t border-gold-subtle/50 flex items-center justify-between">
                 <div class="project-links flex items-center gap-2">
                   <a href="#contact" class="icon-link text-muted hover:text-amber transition-colors" title="GitHub Repository" aria-label="GitHub Repository">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -810,30 +835,30 @@
 
           <!-- Project Card 4: Web Development Project -->
           <div class="project-card glass-panel rounded-2xl overflow-hidden flex flex-col group border border-gold-subtle hover:border-gold transition-all duration-300" id="project-card-4">
-            <div class="project-img-wrapper relative overflow-hidden aspect-video bg-black">
+            <div class="project-img-wrapper view-project-modal-btn relative overflow-hidden aspect-video bg-black cursor-pointer" data-project="4" role="button" tabindex="0" aria-label="Open Web Project Details">
               <img src="assets/images/project-web.svg" 
                    alt="Web Development Project Preview" 
                    class="project-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy">
               <div class="project-img-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                <button type="button" class="view-project-modal-btn p-2.5 rounded-full bg-amber text-black hover:scale-110 transition-transform" data-project="4" title="Quick View" aria-label="View Web Development Project">
+                <span class="p-2.5 rounded-full bg-amber text-black hover:scale-110 transition-transform shadow-lg">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </button>
+                </span>
               </div>
             </div>
             
-            <div class="project-card-body p-6 flex flex-col flex-grow">
-              <div class="tech-tags flex flex-wrap gap-2 mb-3">
-                <span class="tag-pill text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">HTML</span>
-                <span class="tag-pill text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">CSS</span>
-                <span class="tag-pill text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">JavaScript</span>
+            <div class="project-card-body p-4 sm:p-6 flex flex-col flex-grow">
+              <div class="tech-tags flex flex-wrap gap-2 mb-2.5 sm:mb-3">
+                <span class="tag-pill text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">HTML</span>
+                <span class="tag-pill text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">CSS</span>
+                <span class="tag-pill text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 rounded-md bg-amber-subtle text-amber">JS</span>
               </div>
-              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber transition-colors">Web Development Project</h3>
-              <p class="text-xs text-muted-light leading-relaxed mb-6 flex-grow">
-                A responsive web project created to explore front-end development.
+              <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2 group-hover:text-amber transition-colors">Web Development Project</h3>
+              <p class="text-xs text-muted-light leading-relaxed mb-4 sm:mb-6 flex-grow">
+                A responsive web project created to explore front-end development and interactive user interfaces.
               </p>
               
-              <div class="project-card-footer pt-4 border-t border-gold-subtle/50 flex items-center justify-between">
+              <div class="project-card-footer pt-3 sm:pt-4 border-t border-gold-subtle/50 flex items-center justify-between">
                 <div class="project-links flex items-center gap-2">
                   <a href="#contact" class="icon-link text-muted hover:text-amber transition-colors" title="GitHub Repository" aria-label="GitHub Repository">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -858,45 +883,45 @@
     <!-- ============================================================ -->
     <!-- EDUCATION SECTION                                            -->
     <!-- ============================================================ -->
-    <section id="education" class="education-section py-20 relative">
-      <div class="max-w-7xl mx-auto px-6">
+    <section id="education" class="education-section py-16 sm:py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div class="section-header text-center mb-16">
-          <span class="section-tag uppercase text-amber tracking-widest text-xs font-bold">Academic Foundation</span>
-          <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-white mt-2">Education</h2>
-          <div class="section-divider mx-auto mt-3"></div>
+        <div class="section-header text-center mb-12 sm:mb-16">
+          <span class="section-tag uppercase text-amber tracking-widest text-[11px] sm:text-xs font-bold">Academic Foundation</span>
+          <h2 class="section-title text-2xl sm:text-4xl font-extrabold text-white mt-1.5 sm:mt-2">Education</h2>
+          <div class="section-divider mx-auto mt-2.5 sm:mt-3"></div>
         </div>
 
         <div class="max-w-3xl mx-auto">
           <!-- Timeline Card -->
-          <div class="education-timeline-card glass-panel rounded-3xl p-8 sm:p-10 relative overflow-hidden border border-gold-subtle" id="education-card">
+          <div class="education-timeline-card glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 relative overflow-hidden border border-gold-subtle" id="education-card">
             
-            <div class="timeline-wrapper relative pl-8 sm:pl-10">
+            <div class="timeline-wrapper relative pl-6 sm:pl-10">
               <!-- Vertical Golden Line -->
-              <div class="timeline-line-vertical absolute left-3 top-2 bottom-2 w-0.5 bg-gradient-to-b from-amber via-amber-light to-transparent" aria-hidden="true"></div>
+              <div class="timeline-line-vertical absolute left-2.5 sm:left-3 top-2 bottom-2 w-0.5 bg-gradient-to-b from-amber via-amber-light to-transparent" aria-hidden="true"></div>
               
               <!-- Timeline Marker -->
-              <div class="timeline-marker absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-amber shadow-[0_0_12px_#f59e0b] border-2 border-black" aria-hidden="true"></div>
+              <div class="timeline-marker absolute left-1 sm:left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-amber shadow-[0_0_12px_#f59e0b] border-2 border-black" aria-hidden="true"></div>
 
               <!-- Content -->
-              <div class="timeline-content space-y-3">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-subtle border border-amber/30 text-amber text-xs font-mono font-semibold">
+              <div class="timeline-content space-y-2.5 sm:space-y-3">
+                <div class="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 rounded-full bg-amber-subtle border border-amber/30 text-amber text-[11px] sm:text-xs font-mono font-semibold">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                   <span>2025 – Present</span>
                 </div>
 
-                <h3 class="text-2xl font-bold text-white tracking-tight">BCA – Bachelor of Computer Applications</h3>
+                <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">BCA – Bachelor of Computer Applications</h3>
                 
-                <div class="flex flex-wrap items-center gap-3 text-sm">
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm">
                   <span class="font-semibold text-amber flex items-center gap-1.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                     <span>Elims College of Arts and Science</span>
                   </span>
-                  <span class="text-muted">•</span>
-                  <span class="text-muted-light font-medium">2nd Year Student</span>
+                  <span class="text-muted hidden sm:inline">•</span>
+                  <span class="text-muted-light font-medium block sm:inline">2nd Year Student</span>
                 </div>
 
-                <p class="text-muted-light text-sm sm:text-base leading-relaxed pt-2">
+                <p class="text-muted-light text-xs sm:text-base leading-relaxed pt-1 sm:pt-2">
                   Currently pursuing my Bachelor of Computer Applications while developing skills in programming, data science, software development and computer applications.
                 </p>
               </div>
@@ -912,63 +937,63 @@
     <!-- ============================================================ -->
     <!-- INTERESTS & OPEN TO OPPORTUNITIES SECTIONS                   -->
     <!-- ============================================================ -->
-    <section class="interests-opportunities-section py-16 relative">
-      <div class="max-w-7xl mx-auto px-6 space-y-12">
+    <section class="interests-opportunities-section py-12 sm:py-16 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 sm:space-y-12">
         
         <!-- Interests Header & 6 Items -->
         <div>
-          <div class="section-header text-center mb-10">
-            <span class="section-tag uppercase text-amber tracking-widest text-xs font-bold">Passions &amp; Hobbies</span>
+          <div class="section-header text-center mb-8 sm:mb-10">
+            <span class="section-tag uppercase text-amber tracking-widest text-[11px] sm:text-xs font-bold">Passions &amp; Hobbies</span>
             <h2 class="section-title text-2xl sm:text-3xl font-extrabold text-white mt-1">Interests</h2>
             <div class="section-divider mx-auto mt-2"></div>
           </div>
 
-          <div class="interests-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="interests-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
             
             <!-- Item 1: Programming -->
-            <div class="interest-item glass-panel p-4 rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
-              <div class="interest-icon w-10 h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2.5 group-hover:scale-110 transition-transform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <div class="interest-item glass-panel p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
+              <div class="interest-icon w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2 group-hover:scale-110 transition-transform">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
               </div>
               <span class="text-xs font-bold text-white group-hover:text-amber transition-colors">Programming</span>
             </div>
 
             <!-- Item 2: Technology -->
-            <div class="interest-item glass-panel p-4 rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
-              <div class="interest-icon w-10 h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2.5 group-hover:scale-110 transition-transform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <div class="interest-item glass-panel p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
+              <div class="interest-icon w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2 group-hover:scale-110 transition-transform">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
               </div>
               <span class="text-xs font-bold text-white group-hover:text-amber transition-colors">Technology</span>
             </div>
 
             <!-- Item 3: Gaming -->
-            <div class="interest-item glass-panel p-4 rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
-              <div class="interest-icon w-10 h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2.5 group-hover:scale-110 transition-transform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="11" x2="15.01" y2="11"></line><line x1="18" y1="13" x2="18.01" y2="13"></line></svg>
+            <div class="interest-item glass-panel p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
+              <div class="interest-icon w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2 group-hover:scale-110 transition-transform">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="11" x2="15.01" y2="11"></line><line x1="18" y1="13" x2="18.01" y2="13"></line></svg>
               </div>
               <span class="text-xs font-bold text-white group-hover:text-amber transition-colors">Gaming</span>
             </div>
 
             <!-- Item 4: Music -->
-            <div class="interest-item glass-panel p-4 rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
-              <div class="interest-icon w-10 h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2.5 group-hover:scale-110 transition-transform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+            <div class="interest-item glass-panel p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
+              <div class="interest-icon w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2 group-hover:scale-110 transition-transform">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
               </div>
               <span class="text-xs font-bold text-white group-hover:text-amber transition-colors">Music</span>
             </div>
 
             <!-- Item 5: Movies -->
-            <div class="interest-item glass-panel p-4 rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
-              <div class="interest-icon w-10 h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2.5 group-hover:scale-110 transition-transform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+            <div class="interest-item glass-panel p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
+              <div class="interest-icon w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2 group-hover:scale-110 transition-transform">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
               </div>
               <span class="text-xs font-bold text-white group-hover:text-amber transition-colors">Movies</span>
             </div>
 
             <!-- Item 6: Exploring New Technologies -->
-            <div class="interest-item glass-panel p-4 rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
-              <div class="interest-icon w-10 h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2.5 group-hover:scale-110 transition-transform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+            <div class="interest-item glass-panel p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col items-center text-center group hover:border-gold transition-all duration-300">
+              <div class="interest-icon w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center text-amber bg-black-glass border border-gold-subtle mb-2 group-hover:scale-110 transition-transform">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
               </div>
               <span class="text-xs font-bold text-white group-hover:text-amber transition-colors">Exploring Tech</span>
             </div>
@@ -978,13 +1003,13 @@
 
         <!-- Open to Opportunities Card (Dotted Border) -->
         <div class="max-w-2xl mx-auto">
-          <div class="opportunities-card rounded-2xl p-6 text-center border-2 border-dashed border-amber/60 bg-amber-subtle/30 relative" id="opportunities-card">
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-amber text-black mb-3 shadow-[0_0_15px_rgba(245,158,11,0.4)]">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <div class="opportunities-card rounded-2xl p-5 sm:p-6 text-center border-2 border-dashed border-amber/60 bg-amber-subtle/30 relative" id="opportunities-card">
+            <div class="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-amber text-black mb-2.5 sm:mb-3 shadow-[0_0_15px_rgba(245,158,11,0.4)]">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             </div>
-            <h3 class="text-xl font-extrabold text-white">Open to Opportunities</h3>
-            <p class="text-amber-light font-bold text-sm mt-1 tracking-wide">Learning | Collaboration | Projects</p>
-            <p class="text-muted text-xs mt-2 max-w-md mx-auto">Actively open to collaborative study projects, programming challenges, and knowledge-sharing opportunities.</p>
+            <h3 class="text-lg sm:text-xl font-extrabold text-white">Open to Opportunities</h3>
+            <p class="text-amber-light font-bold text-xs sm:text-sm mt-1 tracking-wide">Learning | Collaboration | Projects</p>
+            <p class="text-muted text-xs mt-2 max-w-md mx-auto leading-relaxed">Actively open to collaborative study projects, programming challenges, and knowledge-sharing opportunities.</p>
           </div>
         </div>
 
@@ -994,116 +1019,116 @@
     <!-- ============================================================ -->
     <!-- CONTACT SECTION & INTERACTIVE FORM                           -->
     <!-- ============================================================ -->
-    <section id="contact" class="contact-section py-20 relative">
-      <div class="max-w-7xl mx-auto px-6">
+    <section id="contact" class="contact-section py-16 sm:py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div class="section-header text-center mb-16">
-          <span class="section-tag uppercase text-amber tracking-widest text-xs font-bold">Get In Touch</span>
-          <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-white mt-2">Let's Build Something Together</h2>
-          <p class="text-muted-light text-sm sm:text-base max-w-xl mx-auto mt-3">
+        <div class="section-header text-center mb-12 sm:mb-16">
+          <span class="section-tag uppercase text-amber tracking-widest text-[11px] sm:text-xs font-bold">Get In Touch</span>
+          <h2 class="section-title text-2xl sm:text-4xl font-extrabold text-white mt-1.5 sm:mt-2">Let's Build Something Together</h2>
+          <p class="text-muted-light text-xs sm:text-base max-w-xl mx-auto mt-2 sm:mt-3 leading-relaxed">
             I'm always interested in learning, collaborating, and working on interesting technology and programming projects.
           </p>
-          <div class="section-divider mx-auto mt-3"></div>
+          <div class="section-divider mx-auto mt-2.5 sm:mt-3"></div>
         </div>
 
-        <div class="contact-grid grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="contact-grid grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           
           <!-- Contact Info Column -->
           <div class="contact-info-col lg:col-span-5 space-y-4">
-            <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-gold-subtle space-y-6">
-              <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                <span class="w-2.5 h-6 bg-amber rounded-full"></span>
+            <div class="glass-panel p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-gold-subtle space-y-5 sm:space-y-6">
+              <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-5 sm:h-6 bg-amber rounded-full"></span>
                 <span>Contact Details</span>
               </h3>
 
-              <div class="contact-items-list space-y-4">
+              <div class="contact-items-list space-y-3 sm:space-y-4">
                 
                 <!-- Email Item -->
-                <div class="contact-item flex items-center justify-between p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
+                <div class="contact-item flex items-center justify-between p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
                   <a href="mailto:krishnajith.p.s.15@gmail.com" class="flex items-center gap-3 min-w-0 flex-grow group" title="Send email to krishnajith.p.s.15@gmail.com">
                     <div class="text-amber flex-shrink-0">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                     </div>
                     <div class="min-w-0 flex-grow">
-                      <span class="block text-xs uppercase font-semibold text-muted">Email</span>
-                      <span class="text-sm font-bold text-white font-mono group-hover:text-amber transition-colors truncate block" id="contact-val-email">krishnajith.p.s.15@gmail.com</span>
+                      <span class="block text-[10px] sm:text-xs uppercase font-semibold text-muted">Email</span>
+                      <span class="text-xs sm:text-sm font-bold text-white font-mono group-hover:text-amber transition-colors truncate block" id="contact-val-email">krishnajith.p.s.15@gmail.com</span>
                     </div>
                   </a>
-                  <button type="button" class="btn-copy-contact text-muted hover:text-amber transition-colors p-1.5 flex-shrink-0 ml-2" data-copy="krishnajith.p.s.15@gmail.com" title="Copy Email" aria-label="Copy Email">
+                  <button type="button" class="btn-copy-contact text-muted hover:text-amber transition-colors p-2 flex-shrink-0 ml-1" data-copy="krishnajith.p.s.15@gmail.com" title="Copy Email" aria-label="Copy Email">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                   </button>
                 </div>
 
                 <!-- Phone Item -->
-                <div class="contact-item flex items-center justify-between p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
+                <div class="contact-item flex items-center justify-between p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
                   <a href="tel:8089608409" class="flex items-center gap-3 min-w-0 flex-grow group" title="Call 8089608409">
                     <div class="text-amber flex-shrink-0">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     </div>
                     <div class="min-w-0 flex-grow">
-                      <span class="block text-xs uppercase font-semibold text-muted">Phone</span>
-                      <span class="text-sm font-bold text-white font-mono group-hover:text-amber transition-colors block" id="contact-val-phone">8089608409</span>
+                      <span class="block text-[10px] sm:text-xs uppercase font-semibold text-muted">Phone</span>
+                      <span class="text-xs sm:text-sm font-bold text-white font-mono group-hover:text-amber transition-colors block" id="contact-val-phone">8089608409</span>
                     </div>
                   </a>
-                  <button type="button" class="btn-copy-contact text-muted hover:text-amber transition-colors p-1.5 flex-shrink-0 ml-2" data-copy="8089608409" title="Copy Phone" aria-label="Copy Phone">
+                  <button type="button" class="btn-copy-contact text-muted hover:text-amber transition-colors p-2 flex-shrink-0 ml-1" data-copy="8089608409" title="Copy Phone" aria-label="Copy Phone">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                   </button>
                 </div>
 
                 <!-- Location Item -->
-                <div class="contact-item flex items-center justify-between p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
+                <div class="contact-item flex items-center justify-between p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
                   <div class="flex items-center gap-3 min-w-0">
                     <div class="text-amber flex-shrink-0">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
                     <div class="min-w-0">
-                      <span class="block text-xs uppercase font-semibold text-muted">Location</span>
-                      <span class="text-sm font-bold text-white" id="contact-val-loc">Mundathicode, Thrissur, Kerala</span>
+                      <span class="block text-[10px] sm:text-xs uppercase font-semibold text-muted">Location</span>
+                      <span class="text-xs sm:text-sm font-bold text-white" id="contact-val-loc">Mundathicode, Thrissur, Kerala</span>
                     </div>
                   </div>
                 </div>
 
                 <!-- GitHub Item -->
-                <div class="contact-item flex items-center justify-between p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
+                <div class="contact-item flex items-center justify-between p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
                   <div class="flex items-center gap-3 min-w-0">
                     <div class="text-amber flex-shrink-0">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                     </div>
                     <div class="min-w-0">
-                      <span class="block text-xs uppercase font-semibold text-muted">GitHub</span>
-                      <span class="text-sm font-bold text-white font-mono" id="contact-val-github">[YOUR GITHUB]</span>
+                      <span class="block text-[10px] sm:text-xs uppercase font-semibold text-muted">GitHub</span>
+                      <span class="text-xs sm:text-sm font-bold text-white font-mono" id="contact-val-github">[YOUR GITHUB]</span>
                     </div>
                   </div>
                 </div>
 
                 <!-- LinkedIn Item -->
-                <div class="contact-item flex items-center justify-between p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
+                <div class="contact-item flex items-center justify-between p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
                   <a href="https://www.linkedin.com/in/krishnajith-ps-49b37939a" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 min-w-0 flex-grow group" title="Open LinkedIn Profile">
                     <div class="text-amber flex-shrink-0">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </div>
                     <div class="min-w-0 flex-grow">
-                      <span class="block text-xs uppercase font-semibold text-muted">LinkedIn</span>
-                      <span class="text-xs sm:text-sm font-bold text-white font-mono group-hover:text-amber transition-colors break-all block" id="contact-val-linkedin">https://www.linkedin.com/in/krishnajith-ps-49b37939a</span>
+                      <span class="block text-[10px] sm:text-xs uppercase font-semibold text-muted">LinkedIn</span>
+                      <span class="text-[11px] sm:text-sm font-bold text-white font-mono group-hover:text-amber transition-colors break-all block" id="contact-val-linkedin">krishnajith-ps-49b37939a</span>
                     </div>
                   </a>
-                  <a href="https://www.linkedin.com/in/krishnajith-ps-49b37939a" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-amber transition-colors p-1.5 flex-shrink-0 ml-2" title="Open LinkedIn" aria-label="Open LinkedIn Profile">
+                  <a href="https://www.linkedin.com/in/krishnajith-ps-49b37939a" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-amber transition-colors p-2 flex-shrink-0 ml-1" title="Open LinkedIn" aria-label="Open LinkedIn Profile">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                   </a>
                 </div>
 
                 <!-- Instagram Item -->
-                <div class="contact-item flex items-center justify-between p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
+                <div class="contact-item flex items-center justify-between p-3 sm:p-3.5 rounded-xl bg-black-glass border border-gold-subtle/60 hover:border-gold transition-colors">
                   <a href="https://www.instagram.com/kps_krishnajith" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 min-w-0 flex-grow group" title="Open Instagram Profile">
                     <div class="text-amber flex-shrink-0">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </div>
                     <div class="min-w-0 flex-grow">
-                      <span class="block text-xs uppercase font-semibold text-muted">Instagram</span>
-                      <span class="text-sm font-bold text-white font-mono group-hover:text-amber transition-colors block" id="contact-val-insta">kps_krishnajith</span>
+                      <span class="block text-[10px] sm:text-xs uppercase font-semibold text-muted">Instagram</span>
+                      <span class="text-xs sm:text-sm font-bold text-white font-mono group-hover:text-amber transition-colors block" id="contact-val-insta">kps_krishnajith</span>
                     </div>
                   </a>
-                  <a href="https://www.instagram.com/kps_krishnajith" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-amber transition-colors p-1.5 flex-shrink-0 ml-2" title="Open Instagram" aria-label="Open Instagram Profile">
+                  <a href="https://www.instagram.com/kps_krishnajith" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-amber transition-colors p-2 flex-shrink-0 ml-1" title="Open Instagram" aria-label="Open Instagram Profile">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                   </a>
                 </div>
@@ -1114,41 +1139,41 @@
 
           <!-- Contact Form Column -->
           <div class="contact-form-col lg:col-span-7">
-            <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-gold-subtle relative" id="contact-form-card">
-              <form id="portfolio-contact-form" class="space-y-5" novalidate>
+            <div class="glass-panel p-5 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl border border-gold-subtle relative" id="contact-form-card">
+              <form id="portfolio-contact-form" class="space-y-4 sm:space-y-5" novalidate>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   <!-- Name Input -->
                   <div class="form-group">
-                    <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-muted-light mb-2">Your Name</label>
-                    <input type="text" id="contact-name" name="name" required placeholder="John Doe" 
-                           class="form-input w-full px-4 py-3 rounded-xl bg-black-glass border border-gold-subtle text-white focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber transition-all">
+                    <label for="contact-name" class="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-muted-light mb-1.5 sm:mb-2">Your Name</label>
+                    <input type="text" id="contact-name" name="name" required placeholder="Krishnajith / John Doe" 
+                           class="form-input w-full px-3.5 sm:px-4 py-3 rounded-xl bg-black-glass border border-gold-subtle text-white focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber transition-all">
                   </div>
                   
                   <!-- Email Input -->
                   <div class="form-group">
-                    <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-muted-light mb-2">Your Email</label>
-                    <input type="email" id="contact-email" name="email" required placeholder="john@example.com" 
-                           class="form-input w-full px-4 py-3 rounded-xl bg-black-glass border border-gold-subtle text-white focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber transition-all">
+                    <label for="contact-email" class="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-muted-light mb-1.5 sm:mb-2">Your Email</label>
+                    <input type="email" id="contact-email" name="email" required placeholder="you@example.com" 
+                           class="form-input w-full px-3.5 sm:px-4 py-3 rounded-xl bg-black-glass border border-gold-subtle text-white focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber transition-all">
                   </div>
                 </div>
 
                 <!-- Subject Input -->
                 <div class="form-group">
-                  <label for="contact-subject" class="block text-xs font-bold uppercase tracking-wider text-muted-light mb-2">Subject</label>
+                  <label for="contact-subject" class="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-muted-light mb-1.5 sm:mb-2">Subject</label>
                   <input type="text" id="contact-subject" name="subject" required placeholder="Project Collaboration / Academic Inquiry" 
-                         class="form-input w-full px-4 py-3 rounded-xl bg-black-glass border border-gold-subtle text-white focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber transition-all">
+                         class="form-input w-full px-3.5 sm:px-4 py-3 rounded-xl bg-black-glass border border-gold-subtle text-white focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber transition-all">
                 </div>
 
                 <!-- Message Input -->
                 <div class="form-group">
-                  <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-muted-light mb-2">Your Message</label>
-                  <textarea id="contact-message" name="message" rows="5" required placeholder="Write your message here..." 
-                            class="form-input w-full px-4 py-3 rounded-xl bg-black-glass border border-gold-subtle text-white focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber transition-all resize-none"></textarea>
+                  <label for="contact-message" class="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-muted-light mb-1.5 sm:mb-2">Your Message</label>
+                  <textarea id="contact-message" name="message" rows="4" required placeholder="Write your message here..." 
+                            class="form-input w-full px-3.5 sm:px-4 py-3 rounded-xl bg-black-glass border border-gold-subtle text-white focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber transition-all resize-none"></textarea>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary-glow w-full justify-center py-3.5 text-base" id="contact-submit-btn">
+                <button type="submit" class="btn btn-primary-glow w-full justify-center py-3.5 text-sm sm:text-base" id="contact-submit-btn">
                   <span>Send Message</span>
                   <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </button>
@@ -1167,31 +1192,28 @@
   <!-- ============================================================ -->
   <!-- FOOTER                                                       -->
   <!-- ============================================================ -->
-  <footer class="site-footer border-t border-gold-subtle/40 bg-black/90 relative z-10 pt-12 pb-8">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="footer-grid flex flex-col md:flex-row items-center justify-between gap-8 pb-8">
+  <footer class="site-footer border-t border-gold-subtle/40 bg-black/95 relative z-10 pt-10 sm:pt-12 pb-8 footer-safe-area">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="footer-grid flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 pb-6 sm:pb-8">
         
         <!-- Brand Info -->
-        <div class="footer-brand flex flex-col items-center md:items-start text-center md:text-left gap-2">
-          <div class="flex items-center gap-2.5">
-            <div class="logo-badge-small">
+        <div class="footer-brand flex flex-col items-center md:items-start text-center md:text-left gap-1.5 sm:gap-2">
+          <div class="flex items-center gap-2 sm:gap-2.5">
+            <div class="logo-badge-small flex-shrink-0">
               <span class="logo-text font-black text-amber text-xs">KPS</span>
             </div>
-            <span class="font-extrabold text-white tracking-wider text-base">KRISHNAJITH PS</span>
+            <span class="font-extrabold text-white tracking-wider text-sm sm:text-base">KRISHNAJITH PS</span>
           </div>
           <p class="text-xs text-muted font-medium">BCA Student • Developer • Tech Enthusiast</p>
         </div>
 
         <!-- Footer Social Icons -->
-        <div class="footer-social flex items-center gap-3">
-          <a href="#contact" class="social-icon-btn-sm" title="GitHub" aria-label="GitHub">
+        <div class="footer-social flex items-center gap-2.5 sm:gap-3">
+          <a href="https://github.com/Krishnajith041" target="_blank" rel="noopener noreferrer" class="social-icon-btn-sm" title="GitHub" aria-label="GitHub">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
           <a href="https://www.linkedin.com/in/krishnajith-ps-49b37939a" target="_blank" rel="noopener noreferrer" class="social-icon-btn-sm" title="LinkedIn" aria-label="LinkedIn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/kps_krishnajith" target="_blank" rel="noopener noreferrer" class="social-icon-btn-sm" title="Instagram" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
           <a href="mailto:krishnajith.p.s.15@gmail.com" class="social-icon-btn-sm" title="Email" aria-label="Email">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -1210,11 +1232,11 @@
   <!-- ============================================================ -->
   <!-- INTERACTIVE PROJECT MODAL                                    -->
   <!-- ============================================================ -->
-  <div id="project-modal" class="project-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true" role="dialog">
-    <div class="modal-card glass-panel max-w-2xl w-full rounded-3xl p-6 sm:p-8 border border-gold shadow-2xl relative transform scale-95 transition-transform duration-300">
+  <div id="project-modal" class="project-modal fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true" role="dialog">
+    <div class="modal-card glass-panel max-w-2xl w-full rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-gold shadow-2xl relative transform scale-95 transition-transform duration-300">
       
       <!-- Close Button -->
-      <button type="button" class="modal-close-btn absolute top-5 right-5 p-2 rounded-full text-muted hover:text-white hover:bg-zinc-800/80 transition-colors" id="modal-close-btn" aria-label="Close modal">
+      <button type="button" class="modal-close-btn absolute top-3.5 right-3.5 sm:top-5 sm:right-5 p-2 rounded-full text-muted hover:text-white hover:bg-zinc-800/80 transition-colors" id="modal-close-btn" aria-label="Close modal">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
@@ -1227,11 +1249,11 @@
   </div>
 
   <!-- Toast Notification System -->
-  <div id="toast" class="toast fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-5 py-3.5 rounded-xl glass-panel border border-gold shadow-2xl">
-    <div class="toast-icon text-amber" id="toast-icon">
+  <div id="toast" class="toast fixed bottom-4 sm:bottom-6 left-4 sm:left-auto right-4 sm:right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl glass-panel border border-gold shadow-2xl">
+    <div class="toast-icon text-amber flex-shrink-0" id="toast-icon">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
     </div>
-    <span class="text-sm font-semibold text-white" id="toast-msg">Message sent successfully!</span>
+    <span class="text-xs sm:text-sm font-semibold text-white min-w-0" id="toast-msg">Message sent successfully!</span>
   </div>
 
   <!-- Main JavaScript File -->
